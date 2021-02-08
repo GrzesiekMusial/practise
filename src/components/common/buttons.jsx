@@ -8,6 +8,8 @@ const Button = styled.div`
 
     & div {
         min-width: fit-content;
+        font-weight: bold;
+        font-size: 13px;
     }
 
     & button {
