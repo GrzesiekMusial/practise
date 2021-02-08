@@ -7,7 +7,6 @@ const Header = () => {
         background-color: var(--base);
         display: flex;
         font-size: 20px;
-        height: 60px;
         position: relative;
         text-align: center;
         width: 100%;
@@ -15,7 +14,6 @@ const Header = () => {
 
         @media (max-width: 600px) {
             flex-direction: column;
-            height: auto;
         }
     `;
 

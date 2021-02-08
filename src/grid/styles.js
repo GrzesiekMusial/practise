@@ -3,8 +3,9 @@ import styled from "styled-components";
 const Base = styled.div`
     align-items: center;
     justify-content: center;
-    margin: 50px;
+    align-items: center;
     display: grid;
+    margin: 5%;
     gap: 5px;
 
     & div {
@@ -30,21 +31,21 @@ const styles = [
         number: 10,
         style: styled(Base)`
             @include important-text;
-            grid-template-rows: 300px 300px;
+            grid-template-rows: repeat(2, 0.9fr);
             grid-template-columns: 10% repeat(3, 20%) 10%;
         `,
     },
     {
         number: 9,
         style: styled(Base)`
-            grid-template-rows: repeat(3, 200px);
+            grid-template-rows: repeat(3, 0.9fr);
             grid-template-columns: repeat(3, 30%);
         `,
     },
     {
         number: 4,
         style: styled(Base)`
-            grid-template-rows: repeat(2, 200px);
+            grid-template-rows: repeat(2, 0.9fr);
             grid-template-columns: repeat(2, 30%);
             grid-row-gap: 40px;
             grid-column-gap: 10px;
@@ -53,10 +54,10 @@ const styles = [
     {
         number: 5,
         style: styled(Base)`
-            grid-template-rows: repeat(3, 200px);
+            grid-template-rows: repeat(3, 0.9fr);
             grid-template-columns: repeat(2, 30%);
-            grid-row-gap: 40px;
-            grid-column-gap: 10px;
+            grid-row-gap: 5%;
+            grid-column-gap: 5%;
 
             & div:first-of-type {
                 grid-row-start: 2;
@@ -69,10 +70,10 @@ const styles = [
     {
         number: 7,
         style: styled(Base)`
-            grid-template-rows: repeat(3, 200px);
+            grid-template-rows: repeat(3, 0.9fr);
             grid-template-columns: repeat(3, 30%);
-            grid-row-gap: 40px;
-            grid-column-gap: 10px;
+            grid-row-gap: 3%;
+            grid-column-gap: 3%;
 
             & div:first-of-type {
                 grid-row-start: 1;
@@ -83,10 +84,10 @@ const styles = [
     {
         number: 6,
         style: styled(Base)`
-            grid-template-rows: repeat(3, 200px);
+            grid-template-rows: repeat(3, 0.9fr);
             grid-template-columns: repeat(3, 30%);
-            grid-row-gap: 40px;
-            grid-column-gap: 10px;
+            grid-row-gap: 5%;
+            grid-column-gap: 2%;
 
             & div:last-of-type {
                 grid-row: 2 / 4;
@@ -101,8 +102,8 @@ const styles = [
                 "header header"
                 "content sidebar"
                 "footer footer";
-            grid-template-rows: 100px 200px 50px;
-            grid-template-columns: 50% 20%;
+            grid-template-rows: 1.5fr 2fr 1fr;
+            grid-template-columns: 70% 20%;
 
             & div {
                 &:nth-child(1) {
