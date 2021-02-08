@@ -14,7 +14,7 @@ const Grid = () => {
 
     const loadNew = (number) => {
         if (number < styles.length) return setNext(Math.max(0, number));
-        else setNext(0);
+        else return;
     };
 
     const arr = createElements(styles[next].number);

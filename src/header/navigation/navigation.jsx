@@ -16,6 +16,8 @@ const Navigation = () => {
             flex-direction: column;
             left: -100vw;
             transition: all 0.2s;
+            background-color: var(--base);
+
             & * {
                 border-bottom: 2px solid black;
             }

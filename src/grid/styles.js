@@ -37,7 +37,7 @@ const styles = [
     {
         number: 9,
         style: styled(Base)`
-            grid-template-rows: repeat(4, 200px);
+            grid-template-rows: repeat(3, 200px);
             grid-template-columns: repeat(3, 30%);
         `,
     },
@@ -101,21 +101,21 @@ const styles = [
                 "header header"
                 "content sidebar"
                 "footer footer";
-            grid-template-rows: 150px 1fr 100px;
-            grid-template-columns: 1fr 200px;
+            grid-template-rows: 100px 200px 50px;
+            grid-template-columns: 50% 20%;
 
             & div {
                 &:nth-child(1) {
-                    grid-area: "header";
+                    grid-area: header;
                 }
                 &:nth-child(2) {
-                    grid-area: "content";
+                    grid-area: content;
                 }
                 &:nth-child(3) {
-                    grid-area: "sidebar";
+                    grid-area: sidebar;
                 }
                 &:nth-child(4) {
-                    grid-area: "footer";
+                    grid-area: footer;
                 }
             }
         `,
