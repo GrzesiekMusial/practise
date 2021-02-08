@@ -19,6 +19,9 @@ const Base = styled.div`
         font-size: 2em;
         font-weight: bold;
         border-radius: 5px;
+
+        min-height: fit-content;
+        min-width: fit-content;
         &:hover {
             transition: all 1s;
             background-color: var(--active);
@@ -28,26 +31,28 @@ const Base = styled.div`
 
 const styles = [
     {
+        number: 9,
+        style: styled(Base)`
+            @media (orientation: landscape) {
+                grid-template-columns: repeat(3, 15vh);
+                grid-template-rows: repeat(3, 15vh);
+            }
+
+            @media (orientation: portrait) {
+                grid-template-columns: repeat(3, 20vw);
+                grid-template-rows: repeat(3, 20vw);
+            }
+        `,
+    },
+    {
         number: 10,
         style: styled(Base)`
             @include important-text;
             grid-template-columns: 10% repeat(3, 20%) 10%;
+            max-height: 50vw;
         `,
     },
-    {
-        number: 9,
-        style: styled(Base)`
-            grid-template-columns: repeat(3, 30%);
-        `,
-    },
-    {
-        number: 4,
-        style: styled(Base)`
-            grid-template-columns: repeat(2, 30%);
-            grid-row-gap: 40px;
-            grid-column-gap: 10px;
-        `,
-    },
+
     {
         number: 5,
         style: styled(Base)`
@@ -92,6 +97,82 @@ const styles = [
     {
         number: 4,
         style: styled(Base)`
+            grid-template-columns: repeat(4, 20%);
+            grid-row-gap: 5%;
+            grid-column-gap: 2%;
+
+            max-height: 50vw;
+
+            & div {
+                &:nth-child(1) {
+                    grid-row: 1 / 2;
+                    grid-column: 1 / 2;
+                }
+                &:nth-child(2) {
+                    grid-row: 2 / 3;
+                    grid-column: 2 / 3;
+                }
+                &:nth-child(3) {
+                    grid-row: 1 / 2;
+                    grid-column: 3 / 4;
+                }
+                &:nth-child(4) {
+                    grid-row: 2 / 3;
+                    grid-column: 4 / 5;
+                }
+            }
+        `,
+    },
+
+    {
+        number: 4,
+        style: styled(Base)`
+            grid-template-columns: repeat(4, 20%);
+            grid-row-gap: 5%;
+            grid-column-gap: 2%;
+
+            max-height: 50vw;
+
+            & div {
+                &:nth-child(1) {
+                    grid-row: 1 / 2;
+                    grid-column: 1 / 2;
+                    transform: scale(0.4);
+                }
+                &:nth-child(2) {
+                    grid-row: 2 / 3;
+                    grid-column: 2 / 3;
+                    transform: scale(0.6);
+                }
+                &:nth-child(3) {
+                    grid-row: 1 / 2;
+                    grid-column: 3 / 4;
+                    transform: scale(0.8);
+                }
+                &:nth-child(4) {
+                    grid-row: 2 / 3;
+                    grid-column: 4 / 5;
+                }
+            }
+        `,
+    },
+
+    {
+        number: 4,
+        style: styled(Base)`
+            grid-template-columns: repeat(2, 20%);
+            grid-template-rows: repeat(2, 10%);
+            grid-row-gap: 5%;
+            grid-column-gap: 2%;
+
+            align-content: space-evenly;
+            justify-content: space-evenly;
+        `,
+    },
+
+    {
+        number: 4,
+        style: styled(Base)`
             grid-template-areas:
                 "header header"
                 "content sidebar"
@@ -110,6 +191,37 @@ const styles = [
                 }
                 &:nth-child(4) {
                     grid-area: footer;
+                }
+            }
+        `,
+    },
+    {
+        number: 3,
+        style: styled(Base)`
+            grid-template-columns: repeat(3, 30%);
+
+            & div {
+                opacity: 0.8;
+                border: 2px solid black;
+                z-index: 1;
+                &:hover {
+                    transition: opacity 0ms;
+                    z-index: 3;
+                    opacity: 1;
+                }
+                &:nth-child(1) {
+                    grid-row: 1 / 2;
+                    grid-column: 1 / 3;
+                }
+                &:nth-child(2) {
+                    z-index: 2;
+
+                    grid-row: 1 / 3;
+                    grid-column: 2 / 4;
+                }
+                &:nth-child(3) {
+                    grid-row: 2 / 3;
+                    grid-column: 1 / 3;
                 }
             }
         `,

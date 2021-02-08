@@ -16,7 +16,7 @@ const Burger = () => {
 
     const Burger = styled.div`
         align-self: center;
-        background-color: white;
+        background-color: var(--text);
         color: black;
         height: 4px;
         position: relative;
@@ -25,7 +25,7 @@ const Burger = () => {
 
         &:after,
         :before {
-            background-color: #fff;
+            background-color: var(--text);
             border-radius: 4px;
             content: "";
             display: flex;

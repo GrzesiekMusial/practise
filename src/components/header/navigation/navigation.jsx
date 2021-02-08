@@ -56,7 +56,7 @@ const Navigation = () => {
         <Navigation id="navigation">
             {buttons.map((button) => (
                 <NavLink onClick={(e) => menuClicked(e)} to={button.path}>
-                    {button.name}
+                    <span>{button.name}</span>
                 </NavLink>
             ))}
         </Navigation>
