@@ -1,6 +1,7 @@
 :root {
     --base: #f4f9f9;
     --block: #aaaaaa;
+
     --active: #709fb0;
     --text: #351f39;
     --special: #726a95;
@@ -16,4 +17,5 @@
     min-height: 100vh;
     display: grid;
     grid-template-rows: 50px 1fr 60px;
+    overflow: hidden;
 }

@@ -11,6 +11,7 @@ const Navigation = () => {
         flex-direction: row;
 
         @media (max-width: 600px) {
+            z-index: 9;
             position: absolute;
             height: 100vh;
             flex-direction: column;

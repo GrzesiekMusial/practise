@@ -23,7 +23,10 @@ const Base = styled.div`
         min-height: fit-content;
         min-width: fit-content;
         &:hover {
-            transition: all 1s;
+            z-index: 3;
+            opacity: 1 !important;
+
+            transition: all 1s, opacity 0ms, z-index 0ms;
             background-color: var(--active);
         }
     }
@@ -204,11 +207,7 @@ const styles = [
                 opacity: 0.8;
                 border: 2px solid black;
                 z-index: 1;
-                &:hover {
-                    transition: opacity 0ms;
-                    z-index: 3;
-                    opacity: 1;
-                }
+
                 &:nth-child(1) {
                     grid-row: 1 / 2;
                     grid-column: 1 / 3;

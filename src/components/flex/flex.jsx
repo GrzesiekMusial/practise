@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./styles";
 import Buttons from "../common/buttons";
 
-const Grid = () => {
+const Flex = () => {
     const [next, _setNext] = React.useState(0);
 
     const myStateRef = React.useRef(next);
@@ -48,12 +48,12 @@ const Grid = () => {
     };
 
     const arr = createElements(styles[next].number);
-    const Grid = styles[next].style;
+    const Flex = styles[next].style;
 
     return (
         <>
-            <Grid
-                id="grid"
+            <Flex
+                id="flex"
                 data-aos="fade-up"
                 data-aos-offset="0"
                 data-aos-duration="400"
@@ -61,7 +61,7 @@ const Grid = () => {
                 {arr.map((el, index) =>
                     React.createElement("div", { key: index }, index)
                 )}
-            </Grid>
+            </Flex>
             <Buttons
                 length={styles.length}
                 handleClick={loadNew}
@@ -71,4 +71,4 @@ const Grid = () => {
     );
 };
 
-export default Grid;
+export default Flex;

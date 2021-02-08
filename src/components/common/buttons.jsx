@@ -1,3 +1,4 @@
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 const Button = styled.div`
@@ -10,6 +11,7 @@ const Button = styled.div`
         min-width: fit-content;
         font-weight: bold;
         font-size: 13px;
+        text-align: center;
     }
 
     & button {
@@ -34,6 +36,9 @@ const Button = styled.div`
 `;
 
 const Buttons = ({ status, length, handleClick }) => {
+    let history = useHistory();
+    console.log();
+
     return (
         <Button>
             <button
@@ -43,7 +48,10 @@ const Buttons = ({ status, length, handleClick }) => {
             >
                 BACK
             </button>
-            <div>{`${status + 1} / ${length}`}</div>
+            <div>
+                <div>{history.location.pathname.slice(1).toUpperCase()}</div>
+                <div>{`${status + 1} / ${length}`} </div>
+            </div>
 
             <button
                 onClick={() => {
