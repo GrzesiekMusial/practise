@@ -7,7 +7,6 @@ const Burger = () => {
         align-items: center;
         display: flex;
         height: 40px;
-        margin-left: 20px;
         cursor: pointer;
 
         @media (min-width: 601px) {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styles";
+import Buttons from "../common/buttons";
 
 const Grid = () => {
     const [next, _setNext] = React.useState(0);
@@ -56,23 +57,11 @@ const Grid = () => {
                     React.createElement("div", { key: index }, index)
                 )}
             </Grid>
-            <div>
-                <button
-                    onClick={() => {
-                        loadNew(next + 1);
-                    }}
-                >
-                    NEXT
-                </button>
-                <button
-                    onClick={() => {
-                        loadNew(next - 1);
-                    }}
-                >
-                    PREV
-                </button>
-                <div>{`${next + 1} / ${styles.length}`}</div>
-            </div>
+            <Buttons
+                length={styles.length}
+                handleClick={loadNew}
+                status={next}
+            />
         </>
     );
 };

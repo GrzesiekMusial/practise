@@ -1,8 +1,8 @@
 import { Route, Redirect, Switch } from "react-router-dom";
 
 import "./App.css";
-import Header from "../header/header";
-import Grid from "../grid/grid";
+import Header from "../components/header/header";
+import Grid from "../components/grid/grid";
 
 function App() {
     return (

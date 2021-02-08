@@ -31,21 +31,18 @@ const styles = [
         number: 10,
         style: styled(Base)`
             @include important-text;
-            grid-template-rows: repeat(2, 0.9fr);
             grid-template-columns: 10% repeat(3, 20%) 10%;
         `,
     },
     {
         number: 9,
         style: styled(Base)`
-            grid-template-rows: repeat(3, 0.9fr);
             grid-template-columns: repeat(3, 30%);
         `,
     },
     {
         number: 4,
         style: styled(Base)`
-            grid-template-rows: repeat(2, 0.9fr);
             grid-template-columns: repeat(2, 30%);
             grid-row-gap: 40px;
             grid-column-gap: 10px;
@@ -54,7 +51,6 @@ const styles = [
     {
         number: 5,
         style: styled(Base)`
-            grid-template-rows: repeat(3, 0.9fr);
             grid-template-columns: repeat(2, 30%);
             grid-row-gap: 5%;
             grid-column-gap: 5%;
@@ -70,7 +66,6 @@ const styles = [
     {
         number: 7,
         style: styled(Base)`
-            grid-template-rows: repeat(3, 0.9fr);
             grid-template-columns: repeat(3, 30%);
             grid-row-gap: 3%;
             grid-column-gap: 3%;
@@ -84,7 +79,6 @@ const styles = [
     {
         number: 6,
         style: styled(Base)`
-            grid-template-rows: repeat(3, 0.9fr);
             grid-template-columns: repeat(3, 30%);
             grid-row-gap: 5%;
             grid-column-gap: 2%;
@@ -102,7 +96,6 @@ const styles = [
                 "header header"
                 "content sidebar"
                 "footer footer";
-            grid-template-rows: 1.5fr 2fr 1fr;
             grid-template-columns: 70% 20%;
 
             & div {

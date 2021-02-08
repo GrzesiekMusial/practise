@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 import styled from "styled-components";
-import buttons from "../../app/navigation";
+import buttons from "../../../app/navigation";
 
 const Navigation = () => {
     const Navigation = styled.nav`

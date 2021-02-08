@@ -10,7 +10,6 @@ const Header = () => {
         position: relative;
         text-align: center;
         width: 100%;
-        border-bottom: 2px solid var(--special);
 
         @media (max-width: 600px) {
             flex-direction: column;
