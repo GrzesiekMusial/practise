@@ -32,7 +32,7 @@ const Navigation = () => {
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 1s;
+            transition: all 0.1s;
             opacity: 1;
             overflow: hidden;
             font-weight: bold;
