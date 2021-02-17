@@ -188,12 +188,13 @@ const styles = [
                         border-radius: 50%;
                     }
                     &:after {
-                        animation: bounce 1s infinite linear;
+                        animation: bounce 1s infinite cubic-bezier(0.4, 0, 1, 1);
                         right: 0;
                     }
 
                     &:before {
-                        animation: bounce 1s 0.5s infinite linear;
+                        animation: bounce 1s 0.5s infinite
+                            cubic-bezier(0.4, 0, 1, 1);
                         left: 0;
                     }
                 }
